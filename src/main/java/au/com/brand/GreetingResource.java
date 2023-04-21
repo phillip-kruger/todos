@@ -1,7 +1,9 @@
 package au.com.brand;
 
+import io.smallrye.common.annotation.NonBlocking;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
@@ -12,5 +14,12 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         return "Hello from RESTEasy Reactive";
+    }
+    
+    @GET
+    @Path("/{name}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String hello(@PathParam("name") String name) {
+        return "Hello " + name;
     }
 }

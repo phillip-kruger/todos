@@ -18,4 +18,13 @@ public class GreetingResourceTest {
              .body(is("Hello from RESTEasy Reactive"));
     }
 
+    @Test
+    public void testHelloNamedEndpoint() {
+        given()
+          .when().get("/hello/Test 2")
+          .then()
+             .statusCode(200)
+             .body(is("Hello Test 2"));
+    }
+    
 }
