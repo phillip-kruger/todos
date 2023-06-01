@@ -15,16 +15,16 @@ public class GreetingResourceTest {
           .when().get("/hello")
           .then()
              .statusCode(200)
-             .body(is("Hello from RESTEasy Reactive"));
+             .body(is("Hello Coles"));
     }
 
     @Test
     public void testHelloNamedEndpoint() {
         given()
-          .when().get("/hello/Test 2")
+          .when().get("/hello/Test")
           .then()
              .statusCode(200)
-             .body(is("Hello Test 2"));
+             .body(is("Hello Test"));
     }
     
 }

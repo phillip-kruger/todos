@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TodoSpringResource {
 
     @GetMapping
-    public List<Todo> todos() {
+    public List<Todo> todos(){
         return Todo.listAll();
     }
     
@@ -21,4 +21,5 @@ public class TodoSpringResource {
     public void addTodo(Todo todo) {
         todo.persistAndFlush();
     }
+    
 }
