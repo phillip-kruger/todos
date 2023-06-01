@@ -12,9 +12,8 @@ public class GreetingResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @NonBlocking
     public String hello() {
-        return "Hello Coles";
+        return "Hello Link Group";
     }
     
     @GET

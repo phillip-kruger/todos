@@ -8,10 +8,10 @@ import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Query;
 
 @GraphQLApi
-public class TodoGraphQLResource {
-
+public class TodoGraphQLApi {
+    
     @Query
-    public List<Todo> todos(){
+    public List<Todo> todos() {
         return Todo.listAll();
     }
     

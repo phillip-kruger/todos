@@ -8,10 +8,10 @@ import jakarta.ws.rs.Path;
 import java.util.List;
 
 @Path("/todo")
-public class TodoJaxRsResource {
-
+public class TodoResource {
+    
     @GET
-    public List<Todo> todos(){
+    public List<Todo> todos() {
         return Todo.listAll();
     }
     
@@ -21,5 +21,4 @@ public class TodoJaxRsResource {
     public void addTodo(Todo todo) {
         todo.persistAndFlush();
     }
-    
 }

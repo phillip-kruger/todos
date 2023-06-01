@@ -1,0 +1,4 @@
+2023-06-01 14:04:45,932 pkruger-laptop [49] INFO  [io.quarkus] (main) todos 1.0.0-SNAPSHOT native (powered by Quarkus 999-SNAPSHOT) started in 0.018s. Listening on: http://0.0.0.0:8081
+2023-06-01 14:04:45,932 pkruger-laptop [49] INFO  [io.quarkus] (main) Profile prod activated. 
+2023-06-01 14:04:45,932 pkruger-laptop [49] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, vertx]
+2023-06-01 14:04:47,137 pkruger-laptop [49] INFO  [io.quarkus] (main) todos stopped in 0.003s

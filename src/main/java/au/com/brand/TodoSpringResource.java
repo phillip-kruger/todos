@@ -1,5 +1,6 @@
 package au.com.brand;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,16 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/spring/todo")
 public class TodoSpringResource {
-
+    
     @GetMapping
-    public List<Todo> todos(){
+    public List<Todo> todos() {
         return Todo.listAll();
     }
     
     @PostMapping
     @Transactional
+    @RolesAllowed("admin")
     public void addTodo(Todo todo) {
         todo.persistAndFlush();
     }
-    
 }
